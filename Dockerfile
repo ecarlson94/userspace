@@ -56,8 +56,7 @@ RUN \
 COPY ./ /home/${user}/.dev-container/
 RUN \
     git clone --recursive ${dotfiles} ~/.dotfiles && \
-    chown -R ${user}:${group} /home/${user}/.dotfiles && \
-    cd /home/${user}/.dotfiles
+    chown -R ${user}:${group} /home/${user}/.dotfiles
 
 USER ${user}
 ARG ghVersion=1.7.0
