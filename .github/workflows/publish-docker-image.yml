@@ -1,5 +1,8 @@
 name: Publish Docker Image
 on:
+  repository_dispatch:
+    types:
+      - build_dev_container
   push:
     branches:
       - main
