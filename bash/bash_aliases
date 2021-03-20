@@ -1,0 +1,55 @@
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# Terraform
+alias tfa="terraform apply"
+alias tfaa="terraform apply -auto-approve"
+alias tfd="terraform destroy"
+alias tfda="terraform destroy -auto-approve"
+alias tfi="terraform init"
+alias tfp="terraform plan"
+alias tfr="terraform refresh"
+alias tfs="terraform show"
+alias tfsl="terraform state list"
+alias tfsr="terraform state remove"
+alias tft="terraform taint"
+alias tfv="terraform version"
+
+# Arduino
+alias arduino="arduino-cli"
+alias sketch="arduino sketch"
+alias sketchn="sketch new"
+
+# NPM
+alias nr="npm run"
+alias wp="nr webpack"
+alias wpw="nr webwatch"
+
+# VIM
+alias vimdiff="nvim -d"
+alias vi="nvim"
+alias vim="nvim"
+
+# tmux
+alias dev="tmuxinator start dev"
+alias devtasks="tmuxinator start devtasks"
+alias tasks="tmuxinator start tasks"
+alias dotfiles="tmuxinator start dotfiles"
+
+# dotnet
+alias db="dotnet build"
+alias dr="db && dotnet run"
+
+# basic
+alias grep="grep --color=auto --line-number"
+alias ls="ls --color=always -GF"
+alias restartgpg="gpgconf --kill gpg-agent"

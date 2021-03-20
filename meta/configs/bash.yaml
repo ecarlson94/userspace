@@ -1,0 +1,3 @@
+- link:
+    $HOME/.bashrc: bash/bashrc
+    $HOME/.bash_aliases: bash/bash_aliases

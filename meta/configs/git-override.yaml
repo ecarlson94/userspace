@@ -1,0 +1,11 @@
+- shell:
+    -
+        command: read name && git config --global user.name "$name"
+        stdin: true
+        description: What is your name (First Last)
+        quiet: true
+    -
+        command: read email && git config --global user.email "$email"
+        stdin: true
+        description: What is your git email (email@domain.com)
+        quiet: true

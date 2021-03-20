@@ -1,0 +1,21 @@
+# ~/.config/tmuxinator/dev.yml
+
+name: devtasks
+root: ~/Documents/gitrepos
+
+windows:
+  - editor:
+      layout: 7ddc,208x57,0,0[208x38,0,0,0,208x18,0,39,1]
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - ls
+        - ls
+  - tasks:
+      layout: 5098,208x57,0,0{104x57,0,0[104x28,0,0,27,104x28,0,29,30],103x57,105,0[103x28,105,0,28,103x28,105,29,29]}
+      panes:
+        - ls
+        - ls
+        - ls
+        - ls

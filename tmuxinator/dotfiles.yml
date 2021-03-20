@@ -1,0 +1,15 @@
+# ~/.config/tmuxinator/dotfiles.yml
+
+name: dotfiles
+root: ~/.dotfiles
+windows:
+  - editor:
+      layout: 7ddc,208x57,0,0[208x38,0,0,0,208x18,0,39,1]
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - vim:
+          - vi README.md
+        - terminal:
+          - ls

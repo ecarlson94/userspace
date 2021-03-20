@@ -1,0 +1,13 @@
+# ~/.config/tmuxinator/dev.yml
+
+name: tasks
+root: ~/
+
+windows:
+  - tasks:
+      layout: 5098,208x57,0,0{104x57,0,0[104x28,0,0,27,104x28,0,29,30],103x57,105,0[103x28,105,0,28,103x28,105,29,29]}
+      panes:
+        - ls
+        - ls
+        - ls
+        - ls

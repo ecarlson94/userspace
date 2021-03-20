@@ -1,0 +1,6 @@
+- link:
+    $HOME/.bashrc: bash/bashrc
+    $HOME/.bash_aliases: bash/bash_aliases
+    $HOME/.zshrc: zsh/zshrc
+    $HOME/.zsh/custom: zsh/custom
+    $HOME/.p10k.zsh: zsh/custom/p10k.zsh

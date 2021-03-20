@@ -1,0 +1,2 @@
+- shell:
+    - [ docker pull walawren/dotfiles:latest, Downloaiding dotfiles container... ]

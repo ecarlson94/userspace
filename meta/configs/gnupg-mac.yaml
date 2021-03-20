@@ -1,0 +1,3 @@
+- link:
+    $HOME/.gnupg/gpg-agent.conf: gnupg/gpg-agent-mac.conf
+    $HOME/.gnupg/gpg.conf: gnupg/gpg.conf
