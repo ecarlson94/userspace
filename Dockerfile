@@ -5,7 +5,10 @@ LABEL maintainer "Eric Carlson <e.carlson94@gmail.com>"
 ARG user=walawren
 ARG group=wheel
 ARG uid=1000
-ARG dotfiles=https://github.com/ecarlson94/dotfiles.git
+ARG dotfiles=dotfiles.git
+ARG devcontainer=dev-container.git
+ARG vcsprovider=github.com
+ARG vcsowner=ecarlson94
 
 USER root
 
@@ -55,13 +58,13 @@ RUN \
 
 COPY ./ /home/${user}/.dev-container/
 RUN \
-    git clone --recursive ${dotfiles} ~/.dotfiles && \
+    git clone --recursive https://${vcsprovider}/${vcsowner}/${dotfiles} ~/.dotfiles && \
     chown -R ${user}:${group} /home/${user}/.dotfiles && \
     chown -R ${user}:${group} /home/${user}/.dev-container && \
     cd $HOME/.dev-container && \
-    git remote set-url git@github.com:ecarlson94/dev-container.git && \
+    git remote set-url git@${vcsprovider}:${vcsowner}/${devcontainer} && \
     cd $HOME/.dotfiles && \
-    git remote set-url git@github.com:ecarlson94/dotfiles.git
+    git remote set-url git@${vcsprovider}:${vcsowner}/${dotfiles}
 
 USER ${user}
 ARG ghVersion=1.7.0
