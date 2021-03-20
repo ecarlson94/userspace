@@ -17,6 +17,8 @@ The structure of this repository is heavily inspired by [vsund](https://github.c
         - [Set global git user name and email](#set-global-git-user-name-and-email)
     - [For installing single configurations:](#for-installing-single-configurations)
     - [Post-Installation](#post-installation)
+        - [Mac or Ubuntu Desktop](#mac-or-ubuntu-desktop)
+        - [WSL or headless linux](#wsl-or-headless-linux)
 - [Contents](#contents)
     - [Profiles](#profiles)
     - [Configs](#configs)
@@ -31,14 +33,14 @@ The structure of this repository is heavily inspired by [vsund](https://github.c
 ## Installation
 
 ```bash
-~$ git clone --recursive git@github.com:ecarlson94/dotfiles.git ~/.dotfiles
-~$ cd ~/.dotfiles
+~$ git clone --recursive https://github.com/ecarlson94/dev-container.git ~/.dev-container
+~$ cd ~/.dev-container
 ```
 
 ### For installing a predefined profile:
 
 ```bash
-~/.dotfiles$ ./install-profile <profile> [<configs...>]
+~/.dev-container$ ./install-profile <profile> [<configs...>]
 ```
 See [meta/profiles/](./meta/profiles) for available profiles
 
@@ -46,13 +48,13 @@ See [meta/profiles/](./meta/profiles) for available profiles
 #### Set global git user name and email
 
 ```bash
-~/.dotfiles$ ./install-profile <profile> git-override
+~/.dev-container$ ./install-profile <profile> git-override
 ```
 
 ### For installing single configurations:
 
 ```bash
-~/.dotfiles$ ./install-standalone <configs...>
+~/.dev-container$ ./install-standalone <configs...>
 ```
 See [meta/configs/](./meta/configs) for available configurations
 
@@ -62,7 +64,13 @@ _*Note:*_ Any configuration can be run as sudo by adding `-sudo` to the end of i
 ### Post-Installation
 You can run the above installation commands safely multiple times, if you think that helps with better installation.
 
+#### Mac or Ubuntu Desktop
+1. Exit terminal
+1. Start Alacritty
+
+#### WSL or headless linux
 1. Restart terminal
+1. Run `zsh`
 1. (WSL) Run `compaudit | xargs chmod go-w`
 
 ## Contents
