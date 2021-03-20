@@ -5,6 +5,3 @@
 [submodule "meta/alacritty"]
 	path = meta/alacritty
 	url = https://github.com/alacritty/alacritty.git
-[submodule "meta/nord-dircolors"]
-	path = meta/nord-dircolors
-	url = https://github.com/arcticicestudio/nord-dircolors

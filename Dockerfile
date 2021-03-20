@@ -55,7 +55,7 @@ RUN \
 
 COPY ./ /home/${user}/.dev-container/
 RUN \
-    git clone --recursive ${dotfiles} ~/.dotfiles
+    git clone --recursive ${dotfiles} ~/.dotfiles && \
     chown -R ${user}:${group} /home/${user}/.dotfiles && \
     cd /home/${user}/.dotfiles
 
@@ -64,7 +64,7 @@ ARG ghVersion=1.7.0
 RUN \
     cd $HOME/.dotfiles && \
     ./install-profile linux && \
-    cd $HOME/.dev-container
+    cd $HOME/.dev-container && \
     if [ ! -d ~/.fzf ]; then git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf; fi && ~/.fzf/install --key-bindings --completion --no-update-rc && \
     gem install tmuxinator && \
     sudo go get -u github.com/boyter/scc/ && \
