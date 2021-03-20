@@ -1,5 +1,0 @@
-- link:
-    $HOME/.vimrc: vim/vimrc
-    $HOME/.vim/custom: vim/custom
-    $HOME/.vim/ftplugin: vim/ftplugin
-    $HOME/.config/nvim: vim/config/nvim

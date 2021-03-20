@@ -5,6 +5,7 @@ LABEL maintainer "Eric Carlson <e.carlson94@gmail.com>"
 ARG user=walawren
 ARG group=wheel
 ARG uid=1000
+ARG dotfiles=https://github.com/ecarlson94/dotfiles
 
 USER root
 
@@ -52,8 +53,9 @@ RUN \
     adduser -D -G ${group} ${user} && \
     addgroup ${user} docker
 
-COPY ./ /home/${user}/.dotfiles/
+COPY ./ /home/${user}/.dev-container/
 RUN \
+    git clone --recursive ${dotfiles} ~/.dotfiles
     chown -R ${user}:${group} /home/${user}/.dotfiles && \
     cd /home/${user}/.dotfiles
 
@@ -61,6 +63,8 @@ USER ${user}
 ARG ghVersion=1.7.0
 RUN \
     cd $HOME/.dotfiles && \
+    ./install-profile linux && \
+    cd $HOME/.dev-container
     if [ ! -d ~/.fzf ]; then git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf; fi && ~/.fzf/install --key-bindings --completion --no-update-rc && \
     gem install tmuxinator && \
     sudo go get -u github.com/boyter/scc/ && \
@@ -71,14 +75,6 @@ RUN \
     rm -rf ghcli && \
     rm ghcli.tar.gz && \
     ./install-standalone \
-        github \
-        git \
-        dir-colors \
-        zsh \
-        tmux \
-        tmuxinator \
-        vim \
-        gnupg \
         zsh-dependencies \
         zsh-plugins \
         vim-dependencies \
