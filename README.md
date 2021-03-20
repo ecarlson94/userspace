@@ -2,13 +2,14 @@
 Dotfile & dev environment dependency management using [Dotbot](https://github.com/anishathalye/dotbot) and [Docker](https://www.docker.com/).
 
 Quick uptime with containerized dotfiles and minimal dependency installation on host.
-Most dependencies exist in the [walawren/dotfiles](https://hub.docker.com/r/walawren/dotfiles) container image and the container
+Most dependencies exist in the [walawren/dev-container](https://hub.docker.com/r/walawren/dev-container) container image and the container
 is executed like a binary through [shims links](./meta/configs/shims.yaml) (currently only [zsh](./shims/zsh.sh) entrypoint is needed).
 
 If you want to view the dotfiles used within the container, please review [ecarlson94/dotfiles](https://github.com/ecarlson94/dotfiles).
 
 The structure of this repository is heavily inspired by [vsund](https://github.com/vsund/dotfiles) and [vbrandl](https://github.com/vbrandl/dotfiles).
 
+## Table of Contents
 <!-- TOC GFM -->
 
 - [Dependencies](#dependencies)
@@ -19,6 +20,7 @@ The structure of this repository is heavily inspired by [vsund](https://github.c
     - [Post-Installation](#post-installation)
         - [Mac or Ubuntu Desktop](#mac-or-ubuntu-desktop)
         - [WSL or headless linux](#wsl-or-headless-linux)
+    - [Acquiring the latest image](#acquiring-the-latest-image)
 - [Contents](#contents)
     - [Profiles](#profiles)
     - [Configs](#configs)
@@ -72,6 +74,12 @@ You can run the above installation commands safely multiple times, if you think 
 1. Restart terminal
 1. Run `zsh`
 1. (WSL) Run `compaudit | xargs chmod go-w`
+
+### Acquiring the latest image
+1. Quit Alacritty
+1. Open terminal
+1. Run `docker rmi walawren/dev-container`
+1. Reopen Alacritty
 
 ## Contents
 
