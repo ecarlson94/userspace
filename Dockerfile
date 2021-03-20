@@ -57,6 +57,7 @@ COPY ./ /home/${user}/.dev-container/
 RUN \
     git clone --recursive ${dotfiles} ~/.dotfiles && \
     chown -R ${user}:${group} /home/${user}/.dotfiles && \
+    chown -R ${user}:${group} /home/${user}/.dev-container && \
     cd $HOME/.dev-container && \
     git remote set-url git@github.com:ecarlson94/dev-container.git && \
     cd $HOME/.dotfiles && \
