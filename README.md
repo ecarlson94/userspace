@@ -3,7 +3,7 @@ Dotfile & dev environment dependency management using [Dotbot](https://github.co
 
 Quick uptime with containerized dotfiles and minimal dependency installation on host.
 Most dependencies exist in the [walawren/dev-container](https://hub.docker.com/r/walawren/dev-container) container image and the container
-is executed like a binary through [shims links](./meta/configs/shims.yaml) (currently only [zsh](./shims/zsh.sh) entrypoint is needed).
+is executed like a binary through [shims links](./meta/configs/shims.yaml) (currently only a [zsh wrapper](./shims/zsh.sh) around [shim.sh](./shims/shim.sh) is needed).
 
 If you want to view the dotfiles used within the container, please review [ecarlson94/dotfiles](https://github.com/ecarlson94/dotfiles).
 

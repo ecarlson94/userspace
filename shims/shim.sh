@@ -18,4 +18,4 @@ sudo docker run -it --rm \
   -v $SSH_AUTH_SOCK:$SSH_AUTH_SOCK \
   -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK \
   -u `id -u` \
-  walawren/dotfiles:latest "$@"
+  walawren/dev-container:latest "$@"
