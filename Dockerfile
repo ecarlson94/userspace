@@ -58,13 +58,13 @@ RUN \
 
 COPY ./ /home/${user}/.dev-container/
 RUN \
-    git clone --recursive https://${vcsprovider}/${vcsowner}/${dotfiles} ~/.dotfiles && \
+    git clone --recursive https://${vcsprovider}/${vcsowner}/${dotfiles} /home/${user}/.dotfiles && \
     chown -R ${user}:${group} /home/${user}/.dotfiles && \
     chown -R ${user}:${group} /home/${user}/.dev-container && \
-    cd $HOME/.dev-container && \
-    git remote set-url git@${vcsprovider}:${vcsowner}/${devcontainer} && \
-    cd $HOME/.dotfiles && \
-    git remote set-url git@${vcsprovider}:${vcsowner}/${dotfiles}
+    cd /home/${user}/.dev-container && \
+    git remote set-url origin git@${vcsprovider}:${vcsowner}/${devcontainer} && \
+    cd /home/${user}/.dotfiles && \
+    git remote set-url origin git@${vcsprovider}:${vcsowner}/${dotfiles}
 
 USER ${user}
 ARG ghVersion=1.7.0
