@@ -104,6 +104,8 @@ meta
     ├── <a href="./meta/configs/fonts-mac.yaml" title="fonts-mac.yaml">fonts-mac.yaml</a>
     ├── <a href="./meta/configs/gnupg-configure.yaml" title="gnupg-configure.yaml">gnupg-configure.yaml</a>
     ├── <a href="./meta/configs/homebrew.yaml" title="homebrew.yaml">homebrew.yaml</a>
+    ├── <a href="./meta/configs/host-dotfiles-linux.yaml" title="host-dotfiles-linux.yaml">host-dotfiles-linux.yaml</a>
+    ├── <a href="./meta/configs/host-dotfiles-mac.yaml" title="host-dotfiles-mac.yaml">host-dotfiles-mac.yaml</a>
     ├── <a href="./meta/configs/shims.yaml" title="shims.yaml">shims.yaml</a>
     ├── <a href="./meta/configs/ubuntu-desktop.yaml" title="ubuntu-desktop.yaml">ubuntu-desktop.yaml</a> (contains packages that are gui based)
     ├── <a href="./meta/configs/tmux-plugins.yaml" title="tmux-plugins.yaml">tmux-plugins.yaml</a>
