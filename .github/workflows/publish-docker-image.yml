@@ -35,4 +35,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/dotfiles:${{ secrets.DOCKER_TAG }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/dev-container:${{ secrets.DOCKER_TAG }}
