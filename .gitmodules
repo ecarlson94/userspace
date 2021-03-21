@@ -1,7 +1,3 @@
-[submodule "meta/dotbot"]
-	path = meta/dotbot
-	url = https://github.com/anishathalye/dotbot
-	ignore = dirty
 [submodule "meta/alacritty"]
 	path = meta/alacritty
 	url = https://github.com/alacritty/alacritty.git
