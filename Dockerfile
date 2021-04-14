@@ -46,7 +46,6 @@ RUN \
         pcsc-lite \
         gnupg \
         npm \
-        yarn \
         neovim \
         zsh \
         fontconfig \
@@ -58,7 +57,9 @@ RUN \
         go && \
     ln -sf python3 /usr/bin/python && \
     python3 -m ensurepip && \
-    pip3 install --no-cache --upgrade pip setuptools
+    pip3 install --no-cache --upgrade pip setuptools && \
+    npm install -g yarn
+
 
 RUN \
     echo "%${group} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
