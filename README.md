@@ -1,4 +1,4 @@
-# Bring Your Own Userspace (BYOB)
+# Bring Your Own Userspace (BYOB) [![Publish Docker Image](https://github.com/ecarlson94/userspace/actions/workflows/publish-docker-image.yml/badge.svg)](https://github.com/ecarlson94/userspace/actions/workflows/publish-docker-image.yml)
 Dotfile & dev environment dependency management using [Dotbot](https://github.com/anishathalye/dotbot) and [Docker](https://www.docker.com/).
 
 Quick uptime with containerized dotfiles and minimal dependency installation on host.
