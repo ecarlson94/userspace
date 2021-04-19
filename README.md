@@ -15,7 +15,6 @@ The structure of this repository is heavily inspired by [vsund](https://github.c
 - [Dependencies](#dependencies)
 - [Installation](#installation)
     - [For installing a predefined profile:](#for-installing-a-predefined-profile)
-        - [Set global git user name and email](#set-global-git-user-name-and-email)
     - [For installing single configurations:](#for-installing-single-configurations)
     - [Post-Installation](#post-installation)
         - [Mac or Ubuntu Desktop](#mac-or-ubuntu-desktop)
@@ -33,28 +32,18 @@ The structure of this repository is heavily inspired by [vsund](https://github.c
 - docker (automatically installed)
 
 ## Installation
-
 ```bash
 ~$ git clone --recursive https://github.com/ecarlson94/userspace.git ~/.userspace
 ~$ cd ~/.userspace
 ```
 
 ### For installing a predefined profile:
-
 ```bash
 ~/.userpsace$ ./install-profile <profile> [<configs...>]
 ```
 See [meta/profiles/](./meta/profiles) for available profiles
 
-
-#### Set global git user name and email
-
-```bash
-~/.userpsace$ ./install-profile <profile> git-override
-```
-
 ### For installing single configurations:
-
 ```bash
 ~/.userpsace$ ./install-standalone <configs...>
 ```
@@ -78,7 +67,7 @@ You can run the above installation commands safely multiple times, if you think 
 ### Acquiring the latest image
 1. Quit Alacritty
 1. Open terminal
-1. Run `docker rmi ghcr.io/ecarlson94/userspace`
+1. Run `docker rmi ghcr.io/ecarlson94/userspace:main`
 1. Reopen Alacritty
 
 ## Contents
