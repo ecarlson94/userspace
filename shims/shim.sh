@@ -16,4 +16,4 @@ sudo docker run -it --rm \
   -p 3000:3000 \
   -p 5000:5000 \
   -u `id -u` \
-  walawren/dev-container:latest "$@"
+  ghcr.io/ecarlson94/userspace:main "$@"
