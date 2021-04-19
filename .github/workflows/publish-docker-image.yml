@@ -1,5 +1,8 @@
 name: Publish Docker Image
 on:
+  pull_request:
+    branches:
+      - main
   repository_dispatch:
     types:
       - build_userspace
@@ -12,10 +15,17 @@ jobs:
     name: Push Docker image to container registry
     runs-on: ubuntu-latest
     steps:
+      - uses: haya14busa/action-cond@v1
+        id: branch
+        with:
+          cond: ${{ github.event.client_payload.branch == null }}
+          if_true: ''
+          if_false: ${{ github.event.client_payload.branch }}
+
       - name: Checkout the repo
         uses: actions/checkout@v2
         with:
-          ref: 'main'
+          ref: ${{ steps.branch.outputs.value }}
 
       - name: Docker meta
         id: meta
