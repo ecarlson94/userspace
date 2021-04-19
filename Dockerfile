@@ -1,6 +1,7 @@
 FROM ruby:alpine
 MAINTAINER Eric Carlson
 LABEL maintainer "Eric Carlson <e.carlson94@gmail.com>"
+LABEL org.opencontainers.image.source https://github.com/ecarlson94/dev-container
 
 ARG user=walawren
 ARG group=wheel
