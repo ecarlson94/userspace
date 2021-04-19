@@ -2,14 +2,13 @@ name: Publish Docker Image
 on:
   repository_dispatch:
     types:
-      - build_dev_container
+      - build_userspace
   push:
     branches:
       - main
 
 jobs:
   push_to_registry:
-    environment: prod
     name: Push Docker image to container registry
     runs-on: ubuntu-latest
     steps:

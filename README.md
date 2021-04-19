@@ -1,8 +1,8 @@
-# Dev Container
+# Bring Your Own Userspace (BYOB)
 Dotfile & dev environment dependency management using [Dotbot](https://github.com/anishathalye/dotbot) and [Docker](https://www.docker.com/).
 
 Quick uptime with containerized dotfiles and minimal dependency installation on host.
-Most dependencies exist in the [walawren/dev-container](https://hub.docker.com/r/walawren/dev-container) container image and the container
+Most dependencies exist in the [ecarlson94/userspace](https://github.com/users/ecarlson94/packages/container/package/userspace) container image and the container
 is executed like a binary through [shims links](./meta/configs/shims.yaml) (currently only a [zsh wrapper](./shims/zsh.sh) around [shim.sh](./shims/shim.sh) is needed).
 
 If you want to view the dotfiles used within the container, please review [ecarlson94/dotfiles](https://github.com/ecarlson94/dotfiles).
@@ -35,14 +35,14 @@ The structure of this repository is heavily inspired by [vsund](https://github.c
 ## Installation
 
 ```bash
-~$ git clone --recursive https://github.com/ecarlson94/dev-container.git ~/.dev-container
-~$ cd ~/.dev-container
+~$ git clone --recursive https://github.com/ecarlson94/userspace.git ~/.userspace
+~$ cd ~/.userspace
 ```
 
 ### For installing a predefined profile:
 
 ```bash
-~/.dev-container$ ./install-profile <profile> [<configs...>]
+~/.userpsace$ ./install-profile <profile> [<configs...>]
 ```
 See [meta/profiles/](./meta/profiles) for available profiles
 
@@ -50,13 +50,13 @@ See [meta/profiles/](./meta/profiles) for available profiles
 #### Set global git user name and email
 
 ```bash
-~/.dev-container$ ./install-profile <profile> git-override
+~/.userpsace$ ./install-profile <profile> git-override
 ```
 
 ### For installing single configurations:
 
 ```bash
-~/.dev-container$ ./install-standalone <configs...>
+~/.userpsace$ ./install-standalone <configs...>
 ```
 See [meta/configs/](./meta/configs) for available configurations
 
@@ -78,7 +78,7 @@ You can run the above installation commands safely multiple times, if you think 
 ### Acquiring the latest image
 1. Quit Alacritty
 1. Open terminal
-1. Run `docker rmi walawren/dev-container`
+1. Run `docker rmi ghcr.io/ecarlson94/userspace`
 1. Reopen Alacritty
 
 ## Contents
