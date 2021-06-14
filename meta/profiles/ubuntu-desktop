@@ -1,10 +1,8 @@
 host-dotfiles-linux
 host-shims-sudo
-dir-colors
 apt-sudo
 fonts-linux
-userspace-container-sudo
+userspace-container-linux-sudo
 alacritty-ubuntu-deps-sudo
 alacritty-cargo-sudo
-alacritty
 ubuntu-desktop-sudo

@@ -1,5 +1,12 @@
 #!/bin/bash
 
+eval $(which ssh-agent)
+export TTY=$(tty)
+export GPG_TTY=$TTY
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+echo UPDATESTARTUPTTY | gpg-connect-agent > /dev/null
+gpgconf --launch gpg-agent
+
 docker run -it --rm \
   --privileged \
   -v $HOME/Documents:/Documents:rw \
