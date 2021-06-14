@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo docker run -it --rm \
+docker run -it --rm \
   --privileged \
   -v $HOME/Documents:/Documents:rw \
   -w $HOME \
