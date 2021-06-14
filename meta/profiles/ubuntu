@@ -2,4 +2,4 @@ host-shims-sudo
 dir-colors
 apt-sudo
 fonts-linux
-dotfiles-container-sudo
+userspace-container-sudo
