@@ -19,8 +19,6 @@ docker run -it --rm \
   -v /run/user/$(id -u)/:/run/user/$(id -u)/:ro \
   -v $SSH_AUTH_SOCK:$SSH_AUTH_SOCK \
   -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK \
-  -p 1234:1234 \
-  -p 3000:3000 \
-  -p 5000:5000 \
   -u `id -u` \
+  --network host \
   ghcr.io/ecarlson94/userspace:main "$@"
