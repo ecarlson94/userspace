@@ -15,7 +15,7 @@ on:
 
 jobs:
   push_to_registry:
-    name: Push Docker image to container registry
+    name: Build & Publish Docker Image
     runs-on: ubuntu-latest
     steps:
       - uses: haya14busa/action-cond@v1
