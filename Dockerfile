@@ -17,6 +17,7 @@ ENV PYTHONUNBUFFERED=1
 
 RUN \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
+    echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
     apk upgrade --no-cache && \
     apk add --update --no-cache \
         sudo \
@@ -51,6 +52,7 @@ RUN \
         zsh \
         fontconfig \
         ripgrep \
+        terraform \
         tmux \
         docker \
         docker-compose \
