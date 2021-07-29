@@ -16,15 +16,6 @@ USER root
 
 ENV PYTHONUNBUFFERED=1
 
-RUN apk add --no-cache curl tar openssl sudo bash jq python3
-RUN apk --update --no-cache add postgresql-client postgresql
-RUN apk add --virtual=build gcc libffi-dev musl-dev openssl-dev make python3-dev
-RUN pip3 install virtualenv
-RUN python3 -m virtualenv /azure-cli
-RUN /azure-cli/bin/python -m pip --no-cache-dir install azure-cli==${azurecliversion}
-RUN echo "#!/usr/bin/env sh\r\n\r\n/azure-cli/bin/python -m azure.cli "$@" > /usr/bin/az
-RUN chmod +x /usr/bin/az
-
 RUN \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
@@ -73,6 +64,14 @@ RUN \
     pip3 install --no-cache --upgrade pip setuptools && \
     npm install -g yarn
 
+
+RUN apk add --no-cache curl tar openssl jq
+RUN apk add --virtual=build gcc libffi-dev musl-dev openssl-dev make python3-dev
+RUN pip3 install virtualenv
+RUN python3 -m virtualenv /azure-cli
+RUN /azure-cli/bin/python -m pip --no-cache-dir install azure-cli==${azurecliversion}
+RUN echo "#!/usr/bin/env sh\r\n\r\n/azure-cli/bin/python -m azure.cli "$@" > /usr/bin/az
+RUN chmod +x /usr/bin/az
 
 RUN \
     echo "%${group} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
