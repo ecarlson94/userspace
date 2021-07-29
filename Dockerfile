@@ -17,10 +17,10 @@ USER root
 ENV PYTHONUNBUFFERED=1
 
 RUN \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
-    echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
-    apk upgrade --no-cache && \
-    apk add --update --no-cache \
+    echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
+    && echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
+    && apk upgrade --no-cache \
+    && apk add --update --no-cache \
         sudo \
         autoconf \
         libtool \
@@ -58,52 +58,55 @@ RUN \
         docker \
         docker-compose \
         less \
-        go && \
-    ln -sf python3 /usr/bin/python && \
-    python3 -m ensurepip && \
-    pip3 install --no-cache --upgrade pip setuptools && \
-    npm install -g yarn
+        go \
+    && ln -sf python3 /usr/bin/python \
+    && python3 -m ensurepip \
+    && pip3 install --no-cache --upgrade pip setuptools \
+    && npm install -g yarn
 
-
-RUN apk add --no-cache curl tar openssl jq
-RUN apk add --virtual=build gcc libffi-dev musl-dev openssl-dev make python3-dev
-RUN pip3 install virtualenv
-RUN python3 -m virtualenv /azure-cli
-RUN /azure-cli/bin/python -m pip --no-cache-dir install azure-cli==${azurecliversion}
-RUN echo "#!/usr/bin/env sh\r\n\r\n/azure-cli/bin/python -m azure.cli "$@" > /usr/bin/az
-RUN chmod +x /usr/bin/az
+# Install Azure CLI
+RUN \
+    apk add --no-cache curl tar openssl jq \
+    && apk add --virtual=build gcc libffi-dev musl-dev openssl-dev make python3-dev \
+    && pip3 install virtualenv \
+    && python3 -m virtualenv /azure-cli \
+    && /azure-cli/bin/python -m pip --no-cache-dir install azure-cli==${azurecliversion} \
+    && printf "#!/usr/bin/env sh \
+      \n\n \
+      /azure-cli/bin/python -m azure.cli \"\$@\"" > /usr/bin/az \
+    && chmod +x /usr/bin/az
 
 RUN \
-    echo "%${group} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
-    adduser -D -G ${group} ${user} && \
-    addgroup ${user} docker
+    echo "%${group} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers \
+    && adduser -D -G ${group} ${user} \
+    && addgroup ${user} docker
 
 COPY ./ /home/${user}/.userspace/
 RUN \
-    git clone --recursive https://${vcsprovider}/${vcsowner}/${dotfiles} /home/${user}/.dotfiles && \
-    chown -R ${user}:${group} /home/${user}/.dotfiles && \
-    cd /home/${user}/.dotfiles && \
-    git remote set-url origin git@${vcsprovider}:${vcsowner}/${dotfiles} && \
-    chown -R ${user}:${group} /home/${user}/.userspace && \
-    cd /home/${user}/.userspace && \
-    git remote set-url origin git@${vcsprovider}:${vcsowner}/${userspace}
+    git clone --recursive https://${vcsprovider}/${vcsowner}/${dotfiles} /home/${user}/.dotfiles \
+    && chown -R ${user}:${group} /home/${user}/.dotfiles \
+    && cd /home/${user}/.dotfiles \
+    && git remote set-url origin git@${vcsprovider}:${vcsowner}/${dotfiles} \
+    && chown -R ${user}:${group} /home/${user}/.userspace \
+    && cd /home/${user}/.userspace \
+    && git remote set-url origin git@${vcsprovider}:${vcsowner}/${userspace}
 
 USER ${user}
 ARG ghVersion=1.7.0
 RUN \
-    cd $HOME/.dotfiles && \
-    ./install-profile linux && \
-    cd $HOME/.userspace && \
-    if [ ! -d ~/.fzf ]; then git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf; fi && ~/.fzf/install --key-bindings --completion --no-update-rc && \
-    gem install tmuxinator && \
-    go get -u github.com/boyter/scc/ && \
-    wget -O ./ghcli.tar.gz https://github.com/cli/cli/releases/download/v${ghVersion}/gh_${ghVersion}_linux_amd64.tar.gz && \
-    mkdir ghcli && \
-    tar -xvf ghcli.tar.gz -C ./ghcli && \
-    sudo cp ghcli/gh_${ghVersion}_linux_amd64/bin/gh /usr/bin && \
-    rm -rf ghcli && \
-    rm ghcli.tar.gz && \
-    ./install-standalone \
+    cd $HOME/.dotfiles \
+    && ./install-profile linux \
+    && cd $HOME/.userspace \
+    && if [ ! -d ~/.fzf ]; then git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf; fi && ~/.fzf/install --key-bindings --completion --no-update-rc \
+    && gem install tmuxinator \
+    && go get -u github.com/boyter/scc/ \
+    && wget -O ./ghcli.tar.gz https://github.com/cli/cli/releases/download/v${ghVersion}/gh_${ghVersion}_linux_amd64.tar.gz \
+    && mkdir ghcli \
+    && tar -xvf ghcli.tar.gz -C ./ghcli \
+    && sudo cp ghcli/gh_${ghVersion}_linux_amd64/bin/gh /usr/bin \
+    && rm -rf ghcli \
+    && rm ghcli.tar.gz \
+    && ./install-standalone \
         zsh-dependencies \
         zsh-plugins \
         vim-dependencies \
