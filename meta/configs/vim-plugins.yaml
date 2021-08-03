@@ -1,0 +1,3 @@
+- shell:
+    - [ nvim -c 'PlugInstall|qa', Installing vim plugins... ]
+    - [ nvim -c "CocInstall -sync $(sed ':a;N;$!ba:s/\\n/ /g')|qa", Installing coc plugins... ]
