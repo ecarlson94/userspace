@@ -19,6 +19,8 @@ ENV PYTHONUNBUFFERED=1
 RUN \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
     && echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
+    && echo "http://dl-cdn.alpinelinux.org/alpine/v3.9/main" >> /etc/apk/repositories \
+    && echo "http://dl-cdn.alpinelinux.org/alpine/v3.9/community" >> /etc/apk/repositories \
     && apk upgrade --no-cache \
     && apk add --update --no-cache \
         sudo \
@@ -59,6 +61,8 @@ RUN \
         docker-compose \
         less \
         go \
+        mongodb \
+        yaml-cpp=0.6.2-r2 \
     && ln -sf python3 /usr/bin/python \
     && python3 -m ensurepip \
     && pip3 install --no-cache --upgrade pip setuptools \
@@ -76,6 +80,7 @@ RUN \
       /azure-cli/bin/python -m azure.cli \"\$@\"" > /usr/bin/az \
     && chmod +x /usr/bin/az
 
+# Create user to run commands as
 RUN \
     echo "%${group} ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers \
     && adduser -D -G ${group} ${user} \
@@ -115,5 +120,6 @@ RUN \
         gnupg-configure
 
 ENV HISTFILE=/config/.zsh_history
+ENV MONGOMS_SYSTEM_BINARY=/usr/bin/mongod
 
 CMD [ ]
