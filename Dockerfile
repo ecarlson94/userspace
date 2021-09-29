@@ -114,6 +114,7 @@ RUN \
         tmux-plugins \
         gnupg-configure
 
+# Save cmd history to host machine
 ENV HISTFILE=/config/.zsh_history
 ENV MONGOMS_SYSTEM_BINARY=/usr/bin/mongod
 

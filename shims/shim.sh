@@ -17,6 +17,8 @@ docker run -it --rm \
   -w $HOME \
   -v $PWD:/cwd:rw \
   -v $HOME/.config:/config:rw \
+  # Preserve TMUX sessions outside of container
+  -v $HOME/.tmux/resurrect:/home/walawren/.tmux/resurrect:rw \
   # Docker sock passthrough
   -v /var/run/docker.sock:/var/run/docker.sock \
   # SSH Configuration
