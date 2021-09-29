@@ -37,8 +37,10 @@ RUN \
         py3-pip \
         perl \
         openssh \
+        openssl \
         bash \
         bash-completion \
+        curl \
         cmake \
         ctags \
         file \
@@ -55,6 +57,7 @@ RUN \
         zsh \
         fontconfig \
         ripgrep \
+        tar \
         terraform \
         tmux \
         docker \
@@ -62,23 +65,15 @@ RUN \
         less \
         go \
         mongodb \
+        jq \
         yaml-cpp=0.6.2-r2 \
     && ln -sf python3 /usr/bin/python \
     && python3 -m ensurepip \
     && pip3 install --no-cache --upgrade pip setuptools \
     && npm install -g yarn
 
-# Install Azure CLI
-RUN \
-    apk add --no-cache curl tar openssl jq \
-    && apk add --virtual=build gcc libffi-dev musl-dev openssl-dev make python3-dev \
-    && pip3 install virtualenv \
-    && python3 -m virtualenv /azure-cli \
-    && /azure-cli/bin/python -m pip --no-cache-dir install azure-cli==${azurecliversion} \
-    && printf "#!/usr/bin/env sh \
-      \n\n \
-      /azure-cli/bin/python -m azure.cli \"\$@\"" > /usr/bin/az \
-    && chmod +x /usr/bin/az
+# Install Azure Stuff
+RUN pip3 install --upgrade azure-cli
 
 # Create user to run commands as
 RUN \
