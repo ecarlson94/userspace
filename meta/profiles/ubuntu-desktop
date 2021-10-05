@@ -5,4 +5,5 @@ fonts-linux
 userspace-container-linux-sudo
 alacritty-ubuntu-deps-sudo
 alacritty-cargo-sudo
-ubuntu-desktop-sudo
+ubuntu-snap-sudo
+ubuntu-gnome-sudo
