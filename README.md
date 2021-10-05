@@ -94,7 +94,7 @@ meta
     ├── <a href="./meta/configs/fonts-mac.yaml" title="fonts-mac.yaml">fonts-mac.yaml</a>
     ├── <a href="./meta/configs/gnupg-configure.yaml" title="gnupg-configure.yaml">gnupg-configure.yaml</a>
     ├── <a href="./meta/configs/homebrew.yaml" title="homebrew.yaml">homebrew.yaml</a>
-    ├── <a href="./meta/configs/host-dotfiles-garuda.yaml" title="host-dotfiles-garuda.yaml">host-dotfiles-garuda.yaml</a>
+    ├── <a href="./meta/configs/host-dotfiles-dr460nized.yaml" title="host-dotfiles-dr460nized.yaml">host-dotfiles-dr460nized.yaml</a>
     ├── <a href="./meta/configs/host-dotfiles-linux.yaml" title="host-dotfiles-linux.yaml">host-dotfiles-linux.yaml</a>
     ├── <a href="./meta/configs/host-dotfiles-mac.yaml" title="host-dotfiles-mac.yaml">host-dotfiles-mac.yaml</a>
     ├── <a href="./meta/configs/host-shims.yaml" title="host-shims.yaml">host-shims.yaml</a>
