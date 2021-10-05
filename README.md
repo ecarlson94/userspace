@@ -76,6 +76,7 @@ You can run the above installation commands safely multiple times, if you think 
 <pre>
 meta/profiles
 ├── <a href="./meta/profiles/garuda-linux" title="garuda-linux">garuda-linux</a>
+├── <a href="./meta/profiles/kubuntu" title="kubuntu">kubuntu</a>
 ├── <a href="./meta/profiles/mac" title="mac">mac</a>
 ├── <a href="./meta/profiles/ubuntu" title="ubuntu">ubuntu</a>
 └── <a href="./meta/profiles/ubuntu-desktop" title="ubuntu-desktop">ubuntu-desktop</a>
