@@ -1,0 +1,2 @@
+- shell:
+  - [ snap install discord, Installing Discord... ]
