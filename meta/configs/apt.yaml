@@ -5,4 +5,6 @@
     - apt-get upgrade -y
     - [ apt install -y scdaemon pcscd ubuntu-dev-tools gnupg, Installing GNUPG... ]
     - [ apt install -y fontconfig, Installing font dependencies... ]
-    - [ snap install docker && groupadd -f docker && usermod -aG docker $USER, Installing docker... ]
+    - [ apt install -y, Installing docker... ]
+    - [ groupadd -f docker, Adding Docker group... ]
+    - [ usermod -aG docker $USER, Adding user to Docker group... ]
