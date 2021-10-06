@@ -1,4 +1,3 @@
 - shell:
-    - [ groupadd -f docker, Adding Docker group... ]
-    - [ usermod -aG docker $USER, Adding user to Docker group... ]
+    - newgrp docker
     - [ docker pull ghcr.io/ecarlson94/userspace:main, Downloaiding userspace container... ]
