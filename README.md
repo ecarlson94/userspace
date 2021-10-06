@@ -76,6 +76,7 @@ You can run the above installation commands safely multiple times, if you think 
 <pre>
 meta/profiles
 ├── <a href="./meta/profiles/garuda-linux" title="garuda-linux">garuda-linux</a>
+├── <a href="./meta/profiles/kde-sweet" title="kde-sweet">kde-sweet</a>
 ├── <a href="./meta/profiles/kubuntu" title="kubuntu">kubuntu</a>
 ├── <a href="./meta/profiles/mac" title="mac">mac</a>
 ├── <a href="./meta/profiles/ubuntu" title="ubuntu">ubuntu</a>
@@ -98,6 +99,7 @@ meta
     ├── <a href="./meta/configs/host-dotfiles-linux.yaml" title="host-dotfiles-linux.yaml">host-dotfiles-linux.yaml</a>
     ├── <a href="./meta/configs/host-dotfiles-mac.yaml" title="host-dotfiles-mac.yaml">host-dotfiles-mac.yaml</a>
     ├── <a href="./meta/configs/host-shims.yaml" title="host-shims.yaml">host-shims.yaml</a>
+    ├── <a href="./meta/configs/kde-kvantum-deps.yaml" title="kde-kvantum-deps.yaml">kde-kvantum-deps.yaml</a>
     ├── <a href="./meta/configs/ubuntu-gnome.yaml" title="ubuntu-gnome.yaml">ubuntu-gnome.yaml</a> (contains packages that for GNOME)
     ├── <a href="./meta/configs/ubuntu-snap.yaml" title="ubuntu-snap.yaml">ubuntu-snap.yaml</a> (contains packages that are gui based)
     ├── <a href="./meta/configs/userspace-shims.yaml" title="userspace-shims.yaml">userspace-shims.yaml</a>
