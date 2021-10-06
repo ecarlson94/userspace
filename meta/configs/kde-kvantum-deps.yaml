@@ -1,4 +1,4 @@
 - shell:
     - add-apt-repository ppa:papirus/papirus
     - apt update
-    - apt install -y gt5-style-kvantum qt5-style-kvantum-themes
+    - apt install -y qt5-style-kvantum qt5-style-kvantum-themes
