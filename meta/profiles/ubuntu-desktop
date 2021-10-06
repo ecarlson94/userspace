@@ -2,7 +2,7 @@ host-dotfiles-linux
 host-shims-sudo
 apt-sudo
 fonts-linux
-userspace-container-linux
+userspace-container-sudo
 alacritty-ubuntu-deps-sudo
 alacritty-cargo-sudo
 ubuntu-snap-sudo
