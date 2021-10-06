@@ -102,8 +102,7 @@ meta
     ├── <a href="./meta/configs/ubuntu-snap.yaml" title="ubuntu-snap.yaml">ubuntu-snap.yaml</a> (contains packages that are gui based)
     ├── <a href="./meta/configs/userspace-shims.yaml" title="userspace-shims.yaml">userspace-shims.yaml</a>
     ├── <a href="./meta/configs/tmux-plugins.yaml" title="tmux-plugins.yaml">tmux-plugins.yaml</a>
-    ├── <a href="./meta/configs/userspace-container-linux.yaml" title="userspace-container-linux.yaml">userspace-container-linux.yaml</a>
-    ├── <a href="./meta/configs/userspace-container-mac.yaml" title="userspace-container-mac.yaml">userspace-container-mac.yaml</a>
+    ├── <a href="./meta/configs/userspace-container.yaml" title="userspace-container.yaml">userspace-container.yaml</a>
     ├── <a href="./meta/configs/vim-dependencies.yaml" title="vim-dependencies.yaml">vim-dependencies.yaml</a>
     ├── <a href="./meta/configs/vim-plugins.yaml" title="vim-plugins.yaml">vim-plugins.yaml</a>
     ├── <a href="./meta/configs/zsh-dependencies.yaml" title="zsh-dependencies.yaml">zsh-dependencies.yaml</a>
