@@ -3,7 +3,7 @@
     - apt upgrade -y
     - apt-get update
     - apt-get upgrade -y
-    - [ apt install -y scdaemon pcscd ubuntu-dev-tools gnupg, Installing GNUPG... ]
+    - [ apt install -y pinentry-curses scdaemon pcscd ubuntu-dev-tools gnupg, Installing GNUPG... ]
     - [ apt install -y fontconfig, Installing font dependencies... ]
     - [ apt install -y apt-transport-https ca-certificates curl gnupg lsb-release, Allow apt to use HTTPS repository... ]
     - [ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor --yes -o /usr/share/keyrings/docker-archive-keyring.gpg, Add Docker GPG key... ]
