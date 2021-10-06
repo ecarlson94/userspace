@@ -12,4 +12,4 @@
     - [ apt install -y docker-ce docker-ce-cli containerd.io, Installing Docker Engine...]
     - [ groupadd -f docker, Adding Docker group... ]
     - [ usermod -aG docker $USER, Adding user to Docker group... ]
-    - [ echo "%docker ALL=(root) NOPASSWD: /usr/bin/docker*" | tee -a /etc/sudoers, Allow docker group to run docker... ]
+    - [ 'echo "%docker ALL=(root) NOPASSWD: /usr/bin/docker*" | tee -a /etc/sudoers', Allow docker group to run docker... ]
