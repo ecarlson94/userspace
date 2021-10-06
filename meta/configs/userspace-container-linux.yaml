@@ -1,3 +1,0 @@
-- shell:
-    - newgrp docker
-    - [ docker pull ghcr.io/ecarlson94/userspace:main, Downloaiding userspace container... ]
