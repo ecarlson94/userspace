@@ -1,0 +1,13 @@
+#!/bin/bash
+
+sudo apt update
+sudo apt upgrade -y
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt install -y python3-pip zsh
+
+python3 -m pip install pyyaml
+
+sudo ln -sf python3 /usr/bin/python
+
+./install-profile devcontainer
