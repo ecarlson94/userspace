@@ -1,2 +1,2 @@
 - shell:
-    - [ cd meta/dotfiles && ./install-standalone alacritty dir-colors bash gnupg, Configuring linux host dotfiles for linux... ]
+    - [ cd meta/dotfiles && ./install-standalone git dir-colors bash, Configuring linux host dotfiles for linux... ]

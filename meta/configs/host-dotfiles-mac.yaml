@@ -1,2 +1,2 @@
 - shell:
-    - [ cd meta/dotfiles && ./install-standalone alacritty dir-colors bash gnupg-mac, Configurilinu host dotfiles for mac... ]
+    - [ cd meta/dotfiles && ./install-standalone git dir-colors bash, Configurilinu host dotfiles for mac... ]

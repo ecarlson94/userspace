@@ -1,8 +1,4 @@
-host-dotfiles-dr460nized
-host-shims-sudo
+host-dotfiles-linux
 apt-sudo
 fonts-linux
-userspace-container-sudo
-alacritty-ubuntu-deps-sudo
-alacritty-cargo-sudo
 ubuntu-snap-sudo
