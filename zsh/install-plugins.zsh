@@ -1,19 +1,14 @@
 #!/usr/bin/env zsh
 
-# Check if zplug is installed
-if [ ! -d ~/.zplug ]; then
-    git clone https://github.com/zplug/zplug ~/.zplug
-    source ~/.zplug/init.zsh
-    zplug "zplug/zplug", hook-build:"zplug --self-manage"
+# Check if sheldon is installed
+if [[ ! -f ~/.local/bin/sheldon ]]; then
+    curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh \
+        | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin
 fi
 
 test -e ~/.dircolors && \
    eval `dircolors -b ~/.dircolors`
 
-source ~/.zplug/init.zsh
-source ~/.zsh/custom/plugins.zsh
-
 if [[ ! -v TERM ]]; then export TERM=xterm; fi
-if ! zplug check; then
-    zplug install
-fi
+
+eval "$(sheldon source)"
