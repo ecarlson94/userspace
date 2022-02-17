@@ -11,4 +11,4 @@ test -e ~/.dircolors && \
 
 if [[ ! -v TERM ]]; then export TERM=xterm; fi
 
-eval "$(sheldon source)"
+eval "$($HOME/.local/bin/sheldon --home $HOME --config-dir $HOME/.sheldon --data-dir $HOME/.sheldon source)"
