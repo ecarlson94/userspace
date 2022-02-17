@@ -1,2 +1,3 @@
 - shell:
-    - [ pip3 install --user powerline-status, Installing powerline status... ]
+    - [pip3 install --user powerline-status, Installing powerline status...]
+    - [pip install thefuck, Installing The Fuck...]
