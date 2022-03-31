@@ -4,3 +4,4 @@ credentials.*
 .pkrvars.hcl
 *.pkrvars.hcl
 .nvimlog
+nvim.appimage
