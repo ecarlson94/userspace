@@ -1,3 +1,4 @@
 devcontainer-dotfiles
 zsh-dependencies
 zsh-plugins
+vim-sudo
