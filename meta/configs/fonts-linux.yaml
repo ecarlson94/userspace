@@ -4,4 +4,8 @@
     - cp fonts/MesloLGS\ NF\ Italic.ttf $HOME/.fonts/
     - cp fonts/MesloLGS\ NF\ Regular.ttf $HOME/.fonts/
     - cp fonts/MesloLGS\ NF\ Bold\ Italic.ttf $HOME/.fonts/
+    - cp fonts/Hack\ Bold\ Italic\ Nerd\ Font\ Complete.ttf $HOME/.fonts/
+    - cp fonts/Hack\ Bold\ Nerd\ Font\ Complete.ttf $HOME/.fonts/
+    - cp fonts/Hack\ Italic\ Nerd\ Font\ Complete.ttf $HOME/.fonts/
+    - cp fonts/Hack\ Regular\ Nerd\ Font\ Complete.ttf $HOME/.fonts/
     - [ fc-cache -f -v, Installing fonts... ]
