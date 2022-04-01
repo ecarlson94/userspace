@@ -10,22 +10,22 @@ If you want to view the dotfiles used within the container, please review [ecarl
 The structure of this repository is heavily inspired by [vsund](https://github.com/vsund/dotfiles) and [vbrandl](https://github.com/vbrandl/dotfiles).
 
 ## Table of Contents
+
 <!-- TOC GFM -->
 
 - [Dependencies](#dependencies)
 - [Installation](#installation)
-    - [For installing a predefined profile:](#for-installing-a-predefined-profile)
-    - [For installing single configurations:](#for-installing-single-configurations)
-    - [Post-Installation](#post-installation)
-        - [Mac or Ubuntu Desktop](#mac-or-ubuntu-desktop)
-        - [WSL or headless linux](#wsl-or-headless-linux)
-    - [Acquiring the latest image](#acquiring-the-latest-image)
+  - [For installing a predefined profile:](#for-installing-a-predefined-profile)
+  - [For installing single configurations:](#for-installing-single-configurations)
+  - [Post-Installation](#post-installation)
+    - [Mac or Ubuntu Desktop](#mac-or-ubuntu-desktop)
+    - [WSL or headless linux](#wsl-or-headless-linux)
+  - [Acquiring the latest image](#acquiring-the-latest-image)
 - [Contents](#contents)
-    - [Profiles](#profiles)
-    - [Configs](#configs)
+  - [Profiles](#profiles)
 - [License](#license)
 
-<!-- /TOC -->
+<!-- TOC -->
 
 ## Dependencies
 - git
@@ -81,34 +81,6 @@ meta/profiles
 ├── <a href="./meta/profiles/mac" title="mac">mac</a>
 ├── <a href="./meta/profiles/ubuntu" title="ubuntu">ubuntu</a>
 └── <a href="./meta/profiles/ubuntu-desktop" title="ubuntu-desktop">ubuntu-desktop</a>
-</pre>
-
-### Configs
-<pre>
-meta
-├── <a href="./meta/base.yaml" title="base.yaml">base.yaml</a>
-└── configs
-    ├── <a href="./meta/configs/alacritty-cargo.yaml" title="alacritty-cargo.yaml">alacritty-cargo.yaml</a>
-    ├── <a href="./meta/configs/alacritty-ubuntu-deps.yaml" title="alacritty-ubuntu-deps.yaml">alacritty-ubuntu-deps.yaml</a>
-    ├── <a href="./meta/configs/apt.yaml" title="apt.yaml">apt.yaml</a>
-    ├── <a href="./meta/configs/fonts-linux.yaml" title="fonts-linux.yaml">fonts-linux.yaml</a>
-    ├── <a href="./meta/configs/fonts-mac.yaml" title="fonts-mac.yaml">fonts-mac.yaml</a>
-    ├── <a href="./meta/configs/gnupg-configure.yaml" title="gnupg-configure.yaml">gnupg-configure.yaml</a>
-    ├── <a href="./meta/configs/homebrew.yaml" title="homebrew.yaml">homebrew.yaml</a>
-    ├── <a href="./meta/configs/host-dotfiles-dr460nized.yaml" title="host-dotfiles-dr460nized.yaml">host-dotfiles-dr460nized.yaml</a>
-    ├── <a href="./meta/configs/host-dotfiles-linux.yaml" title="host-dotfiles-linux.yaml">host-dotfiles-linux.yaml</a>
-    ├── <a href="./meta/configs/host-dotfiles-mac.yaml" title="host-dotfiles-mac.yaml">host-dotfiles-mac.yaml</a>
-    ├── <a href="./meta/configs/host-shims.yaml" title="host-shims.yaml">host-shims.yaml</a>
-    ├── <a href="./meta/configs/kde-kvantum-deps.yaml" title="kde-kvantum-deps.yaml">kde-kvantum-deps.yaml</a>
-    ├── <a href="./meta/configs/ubuntu-gnome.yaml" title="ubuntu-gnome.yaml">ubuntu-gnome.yaml</a> (contains packages that for GNOME)
-    ├── <a href="./meta/configs/ubuntu-snap.yaml" title="ubuntu-snap.yaml">ubuntu-snap.yaml</a> (contains packages that are gui based)
-    ├── <a href="./meta/configs/userspace-shims.yaml" title="userspace-shims.yaml">userspace-shims.yaml</a>
-    ├── <a href="./meta/configs/tmux-plugins.yaml" title="tmux-plugins.yaml">tmux-plugins.yaml</a>
-    ├── <a href="./meta/configs/userspace-container.yaml" title="userspace-container.yaml">userspace-container.yaml</a>
-    ├── <a href="./meta/configs/vim-dependencies.yaml" title="vim-dependencies.yaml">vim-dependencies.yaml</a>
-    ├── <a href="./meta/configs/vim-plugins.yaml" title="vim-plugins.yaml">vim-plugins.yaml</a>
-    ├── <a href="./meta/configs/zsh-dependencies.yaml" title="zsh-dependencies.yaml">zsh-dependencies.yaml</a>
-    └── <a href="./meta/configs/zsh-plugins.yaml" title="zsh-plugins.yaml">zsh-plugins.yaml</a>
 </pre>
 
 ## License

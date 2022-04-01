@@ -1,3 +1,0 @@
-- shell:
-    - [ nvim -c 'PlugInstall|qa', Installing vim plugins... ]
-    - [ nvim -c "CocInstall -sync $(cat meta/dotfiles/vim/custom/coc.plugins | tr '\\n' ' ')|qa", Installing coc plugins... ]

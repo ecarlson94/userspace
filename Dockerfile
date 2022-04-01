@@ -109,9 +109,7 @@ RUN \
     && ./install-standalone \
         zsh-dependencies \
         zsh-plugins \
-        vim-dependencies \
-        vim-plugins \
-        tmux-plugins \
+        nvim-dependencies \
         gnupg-configure
 
 # Save cmd history to host machine

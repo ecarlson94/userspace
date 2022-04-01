@@ -1,9 +1,9 @@
 host-dotfiles-linux
-host-shims-sudo
 apt-sudo
 fonts-linux
-userspace-container-sudo
 alacritty-ubuntu-deps-sudo
 alacritty-cargo-sudo
 ubuntu-snap-sudo
 ubuntu-gnome-sudo
+nvim-sudo
+nvim-dependencies-sudo
