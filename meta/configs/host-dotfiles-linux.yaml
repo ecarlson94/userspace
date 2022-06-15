@@ -1,2 +1,2 @@
 - shell:
-    - [ cd meta/dotfiles && ./install-standalone git dir-colors bash alacritty, Configuring linux host dotfiles for linux... ]
+    - [ cd meta/dotfiles && ./install-standalone git dir-colors bash zsh alacritty, Configuring linux host dotfiles for linux... ]
