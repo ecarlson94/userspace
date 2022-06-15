@@ -6,3 +6,5 @@ alacritty-cargo-sudo
 ubuntu-snap-sudo
 nvim-sudo
 nvim-dependencies-sudo
+zsh-dependencies
+zsh-plugins
