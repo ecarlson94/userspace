@@ -3,9 +3,7 @@
     - apt upgrade -y
     - apt-get update
     - apt-get upgrade -y
-    - [ apt install -y pinentry-curses scdaemon pcscd ubuntu-dev-tools gnupg, Installing GNUPG... ]
     - [ apt install -y fontconfig, Installing font dependencies... ]
-    - [ apt install -y gnome-keyring, Installing GNOME Keyring... ]
     - [ apt install -y python3-pip, Installing PIP... ]
     - [ 'echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null', Configure Docker repository... ]
     - apt update

@@ -3,12 +3,6 @@
 # SSH Passthrough Setup
 eval $(which ssh-agent)
 export TTY=$(tty)
-export GPG_TTY=$TTY
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-echo UPDATESTARTUPTTY | gpg-connect-agent > /dev/null
-gpgconf --launch gpg-agent
-# Identity Card unlock
-ssh git@github.com
 
 # Create tmxu session directory
 tmuxDir=$HOME/.tmux/resurrect
@@ -23,7 +17,6 @@ docker run -it --rm \
   -v $HOME/.config:/config:rw \
   -v $tmuxDir:/home/walawren/.tmux/resurrect:rw \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -v ${HOME}/.gnupg/:/.gnupg/:ro \
   -v /run/user/$(id -u)/:/run/user/$(id -u)/:ro \
   -v $SSH_AUTH_SOCK:$SSH_AUTH_SOCK \
   -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK \

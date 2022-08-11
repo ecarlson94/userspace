@@ -49,9 +49,7 @@ RUN \
         gcc \
         coreutils \
         wget \
-        gnupg-scdaemon \
         pcsc-lite \
-        gnupg \
         npm \
         neovim \
         zsh \
@@ -110,7 +108,6 @@ RUN \
         zsh-dependencies \
         zsh-plugins \
         nvim-dependencies \
-        gnupg-configure
 
 # Save cmd history to host machine
 ENV HISTFILE=/config/.zsh_history
