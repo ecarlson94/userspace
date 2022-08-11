@@ -11,3 +11,4 @@
     - [ groupadd -f docker, Adding Docker group... ]
     - [ usermod -aG docker $USER, Adding user to Docker group... ]
     - [ 'echo "%docker ALL=(root) NOPASSWD: /usr/bin/docker*" | tee -a /etc/sudoers', Allow docker group to run docker... ]
+    - [ apt install -y less, Installing less... ]
