@@ -1,0 +1,4 @@
+- shell:
+  - apt update
+  - [ apt install -y git, Installing git... ]
+  - [ apt install -y less, Installing less... ]
