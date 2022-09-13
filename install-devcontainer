@@ -4,7 +4,7 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt install -y python3-pip zsh
+sudo apt install -y python3-pip zsh less
 
 python3 -m pip install pyyaml
 
