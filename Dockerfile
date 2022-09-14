@@ -81,7 +81,7 @@ RUN \
 
 COPY ./ /home/${user}/.userspace/
 RUN \
-    git config --global --add safe.directory '*'
+    git config --global --add safe.directory '*' \
     && git clone --recursive https://${vcsprovider}/${vcsowner}/${dotfiles} /home/${user}/.dotfiles \
     && chown -R ${user}:${group} /home/${user}/.dotfiles \
     && cd /home/${user}/.dotfiles \
