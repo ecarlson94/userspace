@@ -81,13 +81,15 @@ RUN \
 
 COPY ./ /home/${user}/.userspace/
 RUN \
-    git clone --recursive https://${vcsprovider}/${vcsowner}/${dotfiles} /home/${user}/.dotfiles \
+    git config --global --add safe.directory '*'
+    && git clone --recursive https://${vcsprovider}/${vcsowner}/${dotfiles} /home/${user}/.dotfiles \
     && chown -R ${user}:${group} /home/${user}/.dotfiles \
     && cd /home/${user}/.dotfiles \
     && git remote set-url origin git@${vcsprovider}:${vcsowner}/${dotfiles} \
     && chown -R ${user}:${group} /home/${user}/.userspace \
     && cd /home/${user}/.userspace \
-    && git remote set-url origin git@${vcsprovider}:${vcsowner}/${userspace}
+    && git remote set-url origin git@${vcsprovider}:${vcsowner}/${userspace} \
+    && git config --global --unset safe.directory
 
 USER ${user}
 ARG ghVersion=1.7.0
