@@ -99,7 +99,7 @@ RUN \
     && cd $HOME/.userspace \
     && if [ ! -d ~/.fzf ]; then git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf; fi && ~/.fzf/install --key-bindings --completion --no-update-rc \
     && gem install tmuxinator \
-    && go get -u github.com/boyter/scc/ \
+    && go install github.com/boyter/scc@latest \
     && wget -O ./ghcli.tar.gz https://github.com/cli/cli/releases/download/v${ghVersion}/gh_${ghVersion}_linux_amd64.tar.gz \
     && mkdir ghcli \
     && tar -xvf ghcli.tar.gz -C ./ghcli \
