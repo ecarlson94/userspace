@@ -1,3 +1,3 @@
 - shell:
     - [ pip3 install --user --upgrade pynvim, Install neovim plugin manager... ]
-    - [ apt-get install ripgrep -y, Installing RipGrep... ]
+    - [ apt install ripgrep -y, Installing RipGrep... ]
