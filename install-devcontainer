@@ -11,3 +11,5 @@ python3 -m pip install pyyaml
 sudo ln -sf python3 /usr/bin/python
 
 ./install-profile devcontainer
+
+chsh -s $(which zsh)
