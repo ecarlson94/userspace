@@ -1,4 +1,0 @@
-- shell:
-  - [ snap install discord, Installing Discord... ]
-  - [ snap install slack --classic, Installing Slack... ]
-  - [ snap install code --classic]

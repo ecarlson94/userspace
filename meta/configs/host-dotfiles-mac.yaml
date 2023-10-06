@@ -1,2 +1,0 @@
-- shell:
-    - [ cd meta/dotfiles && ./install-standalone git dir-colors bash, Configurilinu host dotfiles for mac... ]

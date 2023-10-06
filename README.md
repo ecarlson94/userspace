@@ -1,9 +1,7 @@
-# Bring Your Own Userspace (BYOB) [![Publish Docker Image](https://github.com/ecarlson94/userspace/actions/workflows/publish-docker-image.yml/badge.svg)](https://github.com/ecarlson94/userspace/actions/workflows/publish-docker-image.yml)
-Dotfile & dev environment dependency management using [Dotbot](https://github.com/anishathalye/dotbot) and [Docker](https://www.docker.com/).
+# Bring Your Own Userspace (BYOB)
+Dotfile & dev environment dependency management using [Dotbot](https://github.com/anishathalye/dotbot).
 
-Quick uptime with containerized dotfiles and minimal dependency installation on host.
-Most dependencies exist in the [ecarlson94/userspace](https://github.com/users/ecarlson94/packages/container/package/userspace) container image and the container
-is executed like a binary through [shims links](./meta/configs/shims.yaml) (currently only a [zsh wrapper](./shims/zsh.sh) around [shim.sh](./shims/shim.sh) is needed).
+Quick uptime with containerized dotfiles and automated dependency installation on host.
 
 If you want to view the dotfiles used within the container, please review [ecarlson94/dotfiles](https://github.com/ecarlson94/dotfiles).
 
@@ -13,17 +11,18 @@ The structure of this repository is heavily inspired by [vsund](https://github.c
 
 <!-- TOC GFM -->
 
-- [Dependencies](#dependencies)
-- [Installation](#installation)
-  - [For installing a predefined profile:](#for-installing-a-predefined-profile)
-  - [For installing single configurations:](#for-installing-single-configurations)
-  - [Post-Installation](#post-installation)
-    - [Mac or Ubuntu Desktop](#mac-or-ubuntu-desktop)
-    - [WSL or headless linux](#wsl-or-headless-linux)
-  - [Acquiring the latest image](#acquiring-the-latest-image)
-- [Contents](#contents)
-  - [Profiles](#profiles)
-- [License](#license)
+- [Bring Your Own Userspace (BYOB)](#bring-your-own-userspace-byob)
+  - [Table of Contents](#table-of-contents)
+  - [Dependencies](#dependencies)
+  - [Installation](#installation)
+    - [For installing a predefined profile:](#for-installing-a-predefined-profile)
+    - [For installing single configurations:](#for-installing-single-configurations)
+    - [Post-Installation](#post-installation)
+      - [Mac or Ubuntu Desktop](#mac-or-ubuntu-desktop)
+      - [WSL or headless linux](#wsl-or-headless-linux)
+  - [Contents](#contents)
+    - [Profiles](#profiles)
+  - [License](#license)
 
 <!-- TOC -->
 
@@ -64,23 +63,13 @@ You can run the above installation commands safely multiple times, if you think 
 1. Run `zsh`
 1. (WSL) Run `compaudit | xargs chmod go-w`
 
-### Acquiring the latest image
-1. Quit Alacritty
-1. Open terminal
-1. Run `docker rmi ghcr.io/ecarlson94/userspace:main`
-1. Reopen Alacritty
-
 ## Contents
 
 ### Profiles
 <pre>
 meta/profiles
-├── <a href="./meta/profiles/garuda-linux" title="garuda-linux">garuda-linux</a>
-├── <a href="./meta/profiles/kde-sweet" title="kde-sweet">kde-sweet</a>
-├── <a href="./meta/profiles/kubuntu" title="kubuntu">kubuntu</a>
-├── <a href="./meta/profiles/mac" title="mac">mac</a>
-├── <a href="./meta/profiles/ubuntu" title="ubuntu">ubuntu</a>
-└── <a href="./meta/profiles/ubuntu-desktop" title="ubuntu-desktop">ubuntu-desktop</a>
+├── <a href="./meta/profiles/devcontainer" title="devcontainer">devcontainer</a>
+└── <a href="./meta/profiles/mac" title="mac">mac</a>
 </pre>
 
 ## License
