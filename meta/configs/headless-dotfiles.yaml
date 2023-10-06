@@ -1,0 +1,2 @@
+- shell:
+    - [ cd meta/dotfiles && ./install-standalone dir-colors git github nvim tmux zsh, Configuring dotfiles for devcontainer... ]

@@ -1,0 +1,5 @@
+- shell:
+    - apt updatsa
+    - [ apt install -y python3 python3-pip, Installing Python... ]
+    - ln -sf python3 /usr/bin/python
+    - [ apt install -y zsh, Installing ZSH... ]

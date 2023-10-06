@@ -2,4 +2,4 @@
 
 # This script is for GitHub Codespaces
 
-./install-devcontainer
+./install-profile devcontainer

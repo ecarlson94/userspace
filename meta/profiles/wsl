@@ -1,5 +1,6 @@
 headless-dotfiles
 apt-sudo
+apt-docker-sudo
 apt-git-sudo
 apt-zsh-sudo
 zsh-dependencies

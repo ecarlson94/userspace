@@ -1,3 +1,4 @@
 - shell:
+    - [python3 -m pip install pyyaml, Installing PyYaml...]
     - [pip3 install --user powerline-status, Installing powerline status...]
     - [pip install thefuck, Installing The Fuck...]
