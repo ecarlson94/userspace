@@ -1,3 +1,4 @@
 - shell:
   - apt update
   - [ apt install ripgrep -y, Installing RipGrep...]
+  - [ apt install fd-find -f, Installing fd...]

@@ -4,6 +4,6 @@ apt-git-sudo
 apt-zsh-sudo
 zsh-dependencies
 zsh-plugins
-apt-ripgrep-sudo
+apt-search-tools-sudo
 snap-nvim-sudo
 nvim-dependencies
