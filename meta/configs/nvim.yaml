@@ -1,5 +1,0 @@
-- shell:
-  - apt update
-  - wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.deb
-  - apt install ./nvim-linux64.deb
-  - rm ./nvim-linux64.deb

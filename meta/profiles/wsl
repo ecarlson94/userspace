@@ -1,7 +1,9 @@
 headless-dotfiles
 apt-sudo
-apt-docker-sudo
 apt-git-sudo
 apt-zsh-sudo
 zsh-dependencies
 zsh-plugins
+apt-ripgrep-sudo
+snap-nvim-sudo
+nvim-dependencies
