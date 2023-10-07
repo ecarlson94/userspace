@@ -1,2 +1,3 @@
 - shell:
-    - [ cd meta/dotfiles && ./install-standalone dir-colors git github nvim tmux zsh, Configuring dotfiles for devcontainer... ]
+  - [ git clone https://github.com/ecarlson94/dotfiles.git meta/dotfiles, Cloning dotfiles]
+  - [ cd meta/dotfiles && ./install-profile headless, Configuring headless dotfiles... ]

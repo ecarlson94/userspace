@@ -1,3 +1,0 @@
-[submodule "meta/dotfiles"]
-	path = meta/dotfiles
-	url = https://github.com/ecarlson94/dotfiles.git

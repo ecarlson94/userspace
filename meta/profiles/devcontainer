@@ -1,6 +1,5 @@
 headless-dotfiles
 apt-sudo
-apt-git-sudo
 apt-zsh-sudo
 zsh-dependencies
 zsh-plugins
