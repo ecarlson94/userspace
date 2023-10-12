@@ -1,3 +1,5 @@
+DEPRECATED in favor of using [Devbox](https://github.com/ecarlson94/devbox).
+
 # Bring Your Own Userspace (BYOB)
 Dotfile & dev environment dependency management using [Dotbot](https://github.com/anishathalye/dotbot).
 
